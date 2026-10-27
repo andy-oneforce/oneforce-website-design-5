@@ -163,15 +163,15 @@
   var x=c.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,2),W=0,H=0,P=[];
   var cols=['244,196,94','255,127,92','157,140,255','232,104,154','79,199,176'];
   var seed=830;function rnd(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
-  for(var i=0;i<2600;i++){var b=i%5,r=.52+b*.075+(rnd()-.5)*.09,a=rnd()*6.2832;P.push({a:a,r:r,z:(rnd()-.5)*.14,s:.6+rnd()*1.7,b:b})}
+  for(var i=0;i<3600;i++){var b=i%5,r=.52+b*.075+(rnd()-.5)*.09,a=rnd()*6.2832;P.push({a:a,r:r,z:(rnd()-.5)*.14,s:.6+rnd()*1.7,b:b})}
   function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
   function draw(t){
     x.clearRect(0,0,W,H);
-    var cx=W*.72,cy=H*.62,R=Math.min(W,H*1.6)*.46,tilt=.38;
+    var cx=W*.68,cy=H*.48,R=Math.min(W,H*1.6)*.46,tilt=.42;
     for(var i=0;i<P.length;i++){var p=P[i],a=p.a+t*.00006*(1+p.b*.25);
-      var px=cx+Math.cos(a)*p.r*R*1.5,py=cy+Math.sin(a)*p.r*R*tilt*1.5+p.z*R;
+      var px=cx+Math.cos(a)*p.r*R*2.4,py=cy+Math.sin(a)*p.r*R*tilt*2.4+p.z*R;
       x.fillStyle='rgba('+cols[p.b]+','+(.28+.5*((Math.sin(a)+1)/2))+')';
-      x.beginPath();x.arc(px,py,p.s*(.7+.4*Math.sin(a)),0,6.2832);x.fill()}
+      x.beginPath();x.arc(px,py,p.s*1.4*(.7+.4*Math.sin(a)),0,6.2832);x.fill()}
   }
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,vis=true;
   function loop(t){if(vis)draw(t);if(!reduce)requestAnimationFrame(loop)}
