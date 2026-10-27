@@ -200,3 +200,8 @@ details p{margin-top:var(--s10);color:var(--ink-2)}
 @media (min-width:1200px){ .logo-chip,.logo-item{width:calc(16.666% - 10px)} .leader .logos{gap:var(--s12)} }
 @media (min-width:1600px){ :root{--container:1240px} }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .rv{opacity:1;transform:none;transition:none} .card,.btn{transition:none} .card:hover{transform:none} }
+
+/* hero background: drawn dot field carried over from design-4 (animation only) */
+#field{position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:100%;z-index:-1;pointer-events:none}
+.hero{overflow:visible}
+.hero>*:not(#field){position:relative}
