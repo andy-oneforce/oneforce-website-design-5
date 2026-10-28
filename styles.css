@@ -56,7 +56,7 @@ p{margin:0}
 .nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent}
 .nav .wrap{display:flex;align-items:center;gap:var(--s24);height:64px}
 .brand{font-weight:700;font-size:17px;letter-spacing:-.34px;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:var(--s8)}
-.brand i{width:18px;height:18px;border-radius:var(--r-small);background:var(--accent);display:inline-block}
+.brand i{width:20px;height:20px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='30 35 475 475'%3E%3Cpath fill='%230d00ff' d='M35 235 L486 44 Q502 38 502 56 L502 458 L35 503 Z'/%3E%3C/svg%3E") center/contain no-repeat;display:inline-block}
 .nav a.l{color:var(--nav-link);font-weight:500;letter-spacing:-.28px;text-decoration:none;padding:8px 4px;display:none;transition:color var(--t) var(--ease)}
 .nav a.l:hover{color:var(--ink)}
 .nav a.l[aria-current=page]{color:var(--ink)}
