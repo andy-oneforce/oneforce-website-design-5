@@ -207,6 +207,7 @@ details p{margin-top:var(--s10);color:var(--ink-2)}
 .hero>*:not(#field){position:relative}
 
 /* hero tall enough for the whole ring, centred around the text */
-.hero{min-height:max(760px,calc(100vh - 64px));display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:var(--s64);padding-bottom:var(--s64)}
+.hero{min-height:600px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:var(--s64);padding-bottom:var(--s64)}
 .hero .actions{justify-content:center}
-@media (max-width:700px){.hero{min-height:680px}}
+@media (max-width:700px){.hero{min-height:620px}}
+.leader .strip{margin-top:var(--s24);padding-left:0;padding-right:0}
